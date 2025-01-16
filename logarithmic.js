@@ -3,10 +3,10 @@ const ctx = document.getElementById('logGraphCanvas').getContext('2d');
 const logGraph = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: Array.from({ length: 100 }, (_, i) => (i + 1) * 0.1), // Generate x values like 0.1, 0.2, ..., 10
+        labels: Array.from({ length: 100 }, (_, i) => (i + 1) * 0.1), 
         datasets: [{
             label: 'Logarithmic Function (log10)',
-            data: Array.from({ length: 100 }, (_, i) => Math.log10((i + 1) * 0.1)), // y = log(x)
+            data: Array.from({ length: 100 }, (_, i) => Math.log10((i + 1) * 0.1)), 
             borderColor: 'blue',
             backgroundColor: 'rgba(0, 123, 255, 0.1)',
             fill: true,
