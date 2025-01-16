@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Ohm's Law</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <nav> 
+                <a href="./index.html" class="nav-link">Home</a>
+                <a href="./derivatives.html" class="nav-link">Derivatives</a>
+                <a href="./kinematics.html" class="nav-link">Kinematics</a>
+                <a href="./ohm.html" class="nav-link">Ohm's Law</a>
+                <a href="./ampere.html" class="nav-link">Ampere's Law</a>
+                <a href="./logarithmic.html" class="nav-link">Logarithmic Functions</a>
+                <a href="./double.html" class="nav-link">Double Angle Formula</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="content">
+            <h1 style="font-weight: 900;">Understanding Ohm's Law</h1>
+            <p><strong>Ohm's Law</strong> is a fundamental principle in electrical engineering and physics that relates voltage, current, and resistance in an electrical circuit. It is expressed by the equation:</p>
+            <div class="formula">
+                <img src="./images/ohm.png" alt="Ohm's Law Formula">
+            </div>
+            <p>Where <em>V</em> represents voltage, <em>I</em> is the current, and <em>R</em> is the resistance.</p>
+
+            <h2 style="margin-bottom: 15px;">Definition</h2>
+            <p>Ohm's Law states that the current through a conductor between two points is directly proportional to the voltage across the two points and inversely proportional to the resistance of the conductor.</p>
+
+            <h2>Examples</h2>
+            <div class="examples">
+                <div class="example" style="background-color: #f9f9f9; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                    <h3>Example 1:</h3>
+                    <p><strong>Problem:</strong> A resistor has a resistance of 10 ohms, and the voltage across it is 20 volts. Find the current.</p>
+                    <div class="solution">
+                        <p><strong>Solution:</strong></p>
+                        <p>Using Ohm's Law: <em>I = V / R</em></p>
+                        <p><strong>Step 1:</strong> Substitute the given values: <em>I = 20V / 10Ω</em></p>
+                        <p><strong>Step 2:</strong> Simplify: <em>I = 2A</em></p>
+                        <p><strong>Answer: I = 2A</strong></p>
+                    </div>
+                </div>
+
+                <div class="example" style="background-color: #eef7ff; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                    <h3>Example 2:</h3>
+                    <p><strong>Problem:</strong> The current flowing through a circuit is 5A, and the resistance is 4 ohms. Find the voltage.</p>
+                    <div class="solution">
+                        <p><strong>Solution:</strong></p>
+                        <p>Using Ohm's Law: <em>V = I × R</em></p>
+                        <p><strong>Step 1:</strong> Substitute the given values: <em>V = 5A × 4Ω</em></p>
+                        <p><strong>Step 2:</strong> Simplify: <em>V = 20V</em></p>
+                        <p><strong>Answer: V = 20V</strong></p>
+                    </div>
+                </div>
+
+                <div class="example" style="background-color: #fef7e7; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                    <h3>Example 3:</h3>
+                    <p><strong>Problem:</strong> A circuit has a voltage of 15V and a current of 3A. Find the resistance.</p>
+                    <div class="solution">
+                        <p><strong>Solution:</strong></p>
+                        <p>Using Ohm's Law: <em>R = V / I</em></p>
+                        <p><strong>Step 1:</strong> Substitute the given values: <em>R = 15V / 3A</em></p>
+                        <p><strong>Step 2:</strong> Simplify: <em>R = 5Ω</em></p>
+                        <p><strong>Answer: R = 5Ω</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="margin-bottom: 15px;">Voltage Calculator</h2>
+            <p>Use the sliders to adjust current and resistance values to calculate the voltage using Ohm's Law.</p>
+            <div class="interactive">
+                <input type="range" id="current" min="0" max="10" step="0.1" value="0">
+                <label for="current">Current (A): <span id="currentValue">0</span></label><br>
+                <input type="range" id="resistance" min="0" max="100" step="1" value="0">
+                <label for="resistance">Resistance (Ω): <span id="resistanceValue">0</span></label><br>
+                <p>Calculated Voltage: <span id="voltageValue">0V</span></p>
+            </div>
+
+            <h2>Practice Questions</h2>
+            <div class="examples">
+                <div class="example">
+                    <p><b>Question 1:</b> Find the current if the voltage is 50V and the resistance is 25Ω.</p>
+                    <button type="button" class="btn btn-primary" onclick="showSolution(1)">Show Solution</button>
+                </div>
+                <div class="example">
+                    <p><b>Question 2:</b> Find the resistance if the voltage is 30V and the current is 6A.</p>
+                    <button type="button" class="btn btn-primary" onclick="showSolution(2)">Show Solution</button>
+                </div>
+                <div class="example">
+                    <p><b>Question 3:</b> Find the voltage if the resistance is 10Ω and the current is 0.5A.</p>
+                    <button type="button" class="btn btn-primary" onclick="showSolution(3)">Show Solution</button>
+                </div>
+            </div>
+
+            <div class="modal fade" id="solutionModal" tabindex="-1" aria-labelledby="solutionModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content rounded-4 shadow">
+                        <div class="modal-header border-bottom-0">
+                            <h1 class="modal-title fs-5" id="solutionModalLabel">Solution</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body py-0">
+                            <div id="solutionContent"></div>
+                        </div>
+                        <div class="modal-footer flex-column align-items-stretch w-100 gap-2 pb-3 border-top-0">
+                            <button type="button" class="btn btn-lg btn-primary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Educational Website</p>
+    </footer>
+
+    <script src="./ohm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
